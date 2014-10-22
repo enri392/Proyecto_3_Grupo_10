@@ -1,0 +1,16 @@
+#Compilación
+
+PHONY: ALL
+
+APP1=animation
+APP2=nw
+APP3=timer
+APP4=event
+
+CC=gcc
+
+cflags=`pkg-config --cflags --libs gtk+-3.0` -lpthread -lm
+
+ALL: 
+	$(CC) $(APP1).c -o $(APP1) $(cflags) 
+
